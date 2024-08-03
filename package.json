@@ -1,0 +1,81 @@
+{
+  "name": "nuxt-toastify",
+  "version": "1.0.0",
+  "description": "Wrapper for Vue 3 Toastify",
+  "repository": "modbender/nuxt-toastify",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "vue",
+    "vue3",
+    "nuxt",
+    "nuxt3",
+    "notification",
+    "vue-notification",
+    "vue3-notification",
+    "nuxt-notification",
+    "nuxt3-notification",
+    "alert",
+    "toast",
+    "toastify",
+    "vue-toastify",
+    "vue3-toastify",
+    "nuxt-toastify",
+    "nuxt3-toastify",
+    "vue-toast",
+    "vue3-toast",
+    "nuxt-toast",
+    "nuxt3-toast",
+    "vue3-component",
+    "nuxt3-component"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.12.4",
+    "defu": "^6.1.4",
+    "vue3-toastify": "^0.2.2"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.3.9",
+    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxt/module-builder": "^0.8.1",
+    "@nuxt/schema": "^3.12.4",
+    "@nuxt/test-utils": "^3.13.1",
+    "@types/node": "^20.14.11",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.12.4",
+    "typescript": "latest",
+    "vitest": "^1.0.0",
+    "vue-tsc": "^2.0.26"
+  },
+  "resolutions": {
+    "rimraf": "latest"
+  },
+  "overrides": {
+    "rimraf": "latest"
+  },
+  "packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"
+}

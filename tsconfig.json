@@ -1,0 +1,16 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "exclude": ["dist", "node_modules", "playground"],
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["es2020"],
+    "types": ["node"],
+    "resolveJsonModule": true, // Add this line to enable resolveJsonModule
+    "paths": {
+      "~/*": ["./*"]
+    }
+  }
+}
