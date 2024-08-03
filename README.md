@@ -18,9 +18,9 @@
 </p>
 
 -----
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
+- ✨&nbsp; [Release Notes](/CHANGELOG.md)
 - 🏀&nbsp; [Online Demo](https://vue3-toastify.js-bridge.com/) | [Online Playground](https://stackblitz.com/github/modbender/nuxt-toastify?file=playground%2Fapp.vue)
-- [📖 &nbsp;Documentation](https://vue3-toastify.js-bridge.com/get-started/introduction.html)
+- 📖&nbsp; [Documentation](https://vue3-toastify.js-bridge.com/get-started/introduction.html)
 
 ## Features
 
@@ -46,11 +46,45 @@
 
 ## Quick Setup
 
-Install the module to your Nuxt application with one command:
+1. Install the module to your Nuxt application with one command:
+   
+    ```bash
+    npx nuxi module add nuxt-toastify
+    ```
 
-```bash
-npx nuxi module add nuxt-toastify
-```
+2. While the module is zero config, if you want to override configs you can start by adding `toastify` config in `nuxt.config.ts`:
+   
+   ```ts
+    export default defineNuxtConfig({
+      modules: ['nuxt-toastify'],
+      toastify: {
+        autoClose: 2000,
+        position: 'top-right',
+        theme: 'auto',
+      },
+    })
+   ```
+
+    Refer to [Container Props](https://vue3-toastify.js-bridge.com/api/container.html) for all configs and it's default values.
+
+3. Call `useToastify` in your project to trigger toasts.
+
+    ```xhtml
+    <template>
+      <div>
+        <button @click="testToastify">Click me</button>
+      </div>
+    </template>
+
+    <script setup>
+    function testToastify() {
+      useToastify("Wow so easy !", {
+        autoClose: 1000,
+        position: ToastifyOption.POSITION.TOP_RIGHT,
+      });
+    }
+    </script>
+    ```
 
 That's it! You can now use Nuxt Toastify in your Nuxt app ✨
 
