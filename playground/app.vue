@@ -1,14 +1,16 @@
 <template>
   <div>
-    <button @click="testToastify">Click me</button>
+    <button @click="testToastify">
+      Click me
+    </button>
   </div>
 </template>
 
 <script setup>
 function testToastify() {
-  useToastify("Wow so easy !", {
+  useToastify('Wow so easy !', {
     autoClose: 1000,
-    position: ToastifyOption.POSITION.BOTTOM_LEFT,
-  });
+    position: ToastifyOption.POSITION.TOP_RIGHT,
+  })
 }
 </script>
