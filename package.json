@@ -79,6 +79,9 @@
   "overrides": {
     "rimraf": "latest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
