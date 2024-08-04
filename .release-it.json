@@ -12,9 +12,7 @@
   },
   "plugins": {
     "release-it-pnpm": {
-      "disableRelease": true,
-      "inFile": "CHANGELOG.md",
-      "publishCommand": "vsce publish --no-dependencies"
+      "inFile": "CHANGELOG.md"
     }
   },
   "hooks": {
