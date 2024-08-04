@@ -14,9 +14,6 @@ importers:
       '@nuxt/kit':
         specifier: ^3.12.4
         version: 3.12.4(magicast@0.3.4)(rollup@4.20.0)
-      defu:
-        specifier: ^6.1.4
-        version: 6.1.4
       vue3-toastify:
         specifier: ^0.2.2
         version: 0.2.2(vue@3.4.35(typescript@5.5.4))
