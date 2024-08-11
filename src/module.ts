@@ -5,6 +5,8 @@ import {
   createResolver,
 } from '@nuxt/kit'
 
+import { defu } from 'defu'
+
 import { name, version } from '../package.json'
 
 import type { ModuleOptions } from './types'
@@ -33,6 +35,16 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
+
+    _nuxt.options.runtimeConfig.toastify = defu(
+      _nuxt.options.runtimeConfig.toastify as ModuleOptions,
+      _options,
+    )
+
+    _nuxt.options.runtimeConfig.public.toastify = defu(
+      _nuxt.options.runtimeConfig.public.toastify as ModuleOptions,
+      _options,
+    )
 
     _nuxt.options.css = [
       ...(_nuxt.options.css || []),
