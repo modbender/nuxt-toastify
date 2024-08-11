@@ -86,6 +86,8 @@
     </script>
     ```
 
+    Refer to [Toast Props](https://vue3-toastify.js-bridge.com/api/toast.html) for all configs and default values to pass to composable `useToastify`.
+
 That's it! You can now use Nuxt Toastify in your Nuxt app ✨
 
 

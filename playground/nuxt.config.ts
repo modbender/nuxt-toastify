@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ['../src/module'],
   toastify: {
     autoClose: 2000,
-    position: 'top-center',
+    position: 'bottom-center',
     theme: 'dark',
   },
   devtools: { enabled: true },

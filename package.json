@@ -48,6 +48,7 @@
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground && husky",
     "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
@@ -55,6 +56,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.12.4",
+    "defu": "^6.1.4",
     "vue3-toastify": "^0.2.2"
   },
   "devDependencies": {
@@ -66,8 +68,6 @@
     "@types/node": "^22.1.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
-    "husky": ">=7",
-    "lint-staged": ">=10",
     "nuxt": "^3.12.4",
     "typescript": "latest",
     "vitest": "^2.0.5",
@@ -81,11 +81,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "eslint --max-warnings 0 ."
-    ]
   }
 }
