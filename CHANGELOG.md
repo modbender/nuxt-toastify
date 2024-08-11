@@ -1,4 +1,31 @@
-### Changelog
+# Changelog
+
+## 0.0.1...main
+
+[compare changes](https://github.com/modbender/nuxt-toastify/compare/0.0.1...main)
+
+### 🩹 Fixes
+
+- Config not passed ([9c1fb35](https://github.com/modbender/nuxt-toastify/commit/9c1fb35))
+
+### 🏡 Chore
+
+- Remove lint-staged, husky, use changelogen ([85c55bc](https://github.com/modbender/nuxt-toastify/commit/85c55bc))
+- Remove husky ([b2e868a](https://github.com/modbender/nuxt-toastify/commit/b2e868a))
+
+### ❤️ Contributors
+
+- Modbender
+
+## 0.0.2
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Config not passed &nbsp;-&nbsp; by **modbender** [<samp>(9c1fb)</samp>](https://github.com/modbender/nuxt-toastify/commit/9c1fb35)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/modbender/nuxt-toastify/compare/0.0.1...0.0.2)
+
+##
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
