@@ -16,6 +16,6 @@
     }
   },
   "hooks": {
-    "after:bump": "npx changelogen -r ${version} --output && pnpm lint:fix"
+    "after:bump": "npx changelogen --output && pnpm lint:fix"
   }
 }
