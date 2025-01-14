@@ -1,4 +1,6 @@
-export type { ToastContainerOptions as ModuleOptions } from 'vue3-toastify'
+import type { ToastContainerOptions } from 'vue3-toastify'
+
+export type ModuleOptions = ToastContainerOptions
 
 declare module 'nuxt-toastify' {
   interface NuxtConfig {
