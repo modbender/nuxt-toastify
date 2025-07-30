@@ -1,6 +1,6 @@
 {
   "name": "nuxt-toastify",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Wrapper for Vue 3 Toastify",
   "repository": "modbender/nuxt-toastify",
   "license": "MIT",
