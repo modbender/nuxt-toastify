@@ -24,7 +24,7 @@ export default defineNuxtModule<ModuleOptions>({
     multiple: true,
     newestOnTop: false,
     dangerouslyHTMLString: false,
-    clearOnUrlChange: true,
+    clearOnUrlChange: false,
     rtl: false,
     autoClose: 5000,
     hideProgressBar: false,
@@ -33,26 +33,26 @@ export default defineNuxtModule<ModuleOptions>({
     closeOnClick: true,
     theme: 'auto',
   },
-  setup(_options, _nuxt) {
+  setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    _nuxt.options.runtimeConfig.toastify = defu(
-      _nuxt.options.runtimeConfig.toastify as ModuleOptions,
-      _options,
+    nuxt.options.runtimeConfig.toastify = defu(
+      nuxt.options.runtimeConfig.toastify || {},
+      options,
     )
 
-    _nuxt.options.runtimeConfig.public.toastify = defu(
-      _nuxt.options.runtimeConfig.public.toastify as ModuleOptions,
-      _options,
+    nuxt.options.runtimeConfig.public.toastify = defu(
+      nuxt.options.runtimeConfig.public.toastify || {},
+      options,
     )
 
-    _nuxt.options.css = [
-      ...(_nuxt.options.css || []),
+    nuxt.options.css = [
+      ...(nuxt.options.css || []),
       'vue3-toastify/dist/index.css',
     ]
 
-    _nuxt.options.build.transpile = [
-      ...(_nuxt.options.build.transpile || []),
+    nuxt.options.build.transpile = [
+      ...(nuxt.options.build.transpile || []),
       'vue3-toastify',
     ]
 
