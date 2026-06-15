@@ -39,12 +39,12 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.runtimeConfig.toastify = defu(
       nuxt.options.runtimeConfig.toastify || {},
       options,
-    )
+    ) as typeof nuxt.options.runtimeConfig.toastify
 
     nuxt.options.runtimeConfig.public.toastify = defu(
       nuxt.options.runtimeConfig.public.toastify || {},
       options,
-    )
+    ) as typeof nuxt.options.runtimeConfig.public.toastify
 
     nuxt.options.css = [
       ...(nuxt.options.css || []),

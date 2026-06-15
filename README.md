@@ -20,7 +20,7 @@
 -----
 - ✨&nbsp; [Release Notes](/CHANGELOG.md)
 - 🏀&nbsp; [Online Demo](https://vue3-toastify.js-bridge.com/) | [Online Playground](https://stackblitz.com/github/modbender/nuxt-toastify?file=playground%2Fapp.vue)
-- 📖&nbsp; [Documentation](https://vue3-toastify.js-bridge.com/get-started/introduction.html)
+- 📖&nbsp; [Documentation](https://modbender.in/nuxt-toastify/)
 
 ## Features
 
